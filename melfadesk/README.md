@@ -1,6 +1,6 @@
-# MelfaDesk trial build
+# MelfaDesk
 
-A throwaway trial of a RustDesk 1.5.3 build with a fixed name and fixed settings. Not a product, not signed, not for customers.
+RustDesk 1.5.3 with the name MelfaDesk and fixed settings. Not digitally signed.
 
 - `custom.json` is the configuration, `custom.txt` the same content signed by `sign-custom.mjs`. The private key is not in this repository.
 - Changed in the source: the public key that verifies `custom.txt` (`src/common.rs`) and the names in `flutter/windows/runner/Runner.rc`.

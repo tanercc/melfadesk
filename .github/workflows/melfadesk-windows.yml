@@ -1,4 +1,4 @@
-name: MelfaDesk Windows trial build
+name: MelfaDesk Windows build
 
 # Windows x64 only. The steps are those of flutter-build.yml at RustDesk 1.5.3, without signing, publishing, the portable
 # packer and the virtual display and printer drivers.
@@ -125,7 +125,7 @@ jobs:
       - name: Upload the program folder
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: melfadesk-trial-dist-x64
+          name: melfadesk-dist-x64
           path: melfadesk-dist
           if-no-files-found: error
           retention-days: 14
@@ -145,13 +145,13 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "msbuild failed with exit code $LASTEXITCODE." }
           popd
           $msi = Get-ChildItem ./res/msi/Package/bin/*/Release/en-us/Package.msi | Select-Object -First 1
-          mv $msi.FullName ./melfadesk-out/MelfaDesk-trial-${{ env.VERSION }}-x64.msi
+          mv $msi.FullName ./melfadesk-out/MelfaDesk-${{ env.VERSION }}-x64.msi
           Get-FileHash ./melfadesk-out/*.msi -Algorithm SHA256 | Format-List
 
       - name: Upload the msi
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: melfadesk-trial-msi-x64
+          name: melfadesk-msi-x64
           path: melfadesk-out
           if-no-files-found: error
           retention-days: 14
