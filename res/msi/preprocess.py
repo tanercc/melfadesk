@@ -25,18 +25,7 @@ g_arpsystemcomponent = {
         "t": "string",
         "v": "!(loc.AR_Comment)",
     },
-    "Contact": {
-        "msi": "ARPCONTACT",
-        "v": "https://github.com/rustdesk/rustdesk",
-    },
-    "HelpLink": {
-        "msi": "ARPHELPLINK",
-        "v": "https://github.com/rustdesk/rustdesk/issues/",
-    },
-    "ReadMe": {
-        "msi": "ARPREADME",
-        "v": "https://github.com/rustdesk/rustdesk",
-    },
+    # MelfaDesk: no RustDesk support links in Programs and Features (no Contact, HelpLink, ReadMe).
 }
 
 def default_revision_version():

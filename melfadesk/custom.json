@@ -35,6 +35,7 @@
     "hide-server-settings": "Y",
     "hide-proxy-settings": "Y",
     "hide-websocket-settings": "Y",
-    "hide-remote-printer-settings": "Y"
+    "hide-remote-printer-settings": "Y",
+    "hide-powered-by-me": "Y"
   }
 }
