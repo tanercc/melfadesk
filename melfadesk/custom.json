@@ -9,7 +9,7 @@
     "approve-mode": "password-click",
     "verification-method": "use-temporary-password",
     "access-mode": "custom",
-    "enable-file-transfer": "N",
+    "enable-file-transfer": "Y",
     "enable-tunnel": "N",
     "enable-terminal": "N",
     "enable-camera": "N",
